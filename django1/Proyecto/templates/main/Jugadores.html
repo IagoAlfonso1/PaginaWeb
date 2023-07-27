@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coleccion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .fondo{
+         background-image: url(../../static/fondo.jpg);
+         }
+         .Header{
+              color: white;
+              text-align: center;
+              font-size: 30px;
+              font-family: "Georgia", Times, serif;
+          }
+          .card-title{
+              color: white;
+              text-align: center;
+              font-size: 45px;
+              font-family: "Georgia", Times, serif;
+          }
+          .card{
+              background: grey;
+              transform: scale(0.65);
+          }
+          .card-text{
+              color: white;
+              text-align: center;
+              font-size: 30px;
+              font-family: "Georgia", Times, serif;
+          }
+    </style>
+</head>
+<body class="fondo">
+    <div class="container-fluid">
+        <div class="row">
+        <nav id="navbar-example2 " class="navbar" style="background-color: #11172d;">
+          <img src="../../static/Logo.png" width="170">
+            <ul class="nav justify-content-center">
+                  <li class="nav-item1">
+                    <a class="nav-link text-white" href="../../Lobby/">EQUIPO</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link active text-white" aria-current="page" href="../Liga/">TABLA</a>
+                  </li>
+                  <li class="nav-item1">
+                    <a class="nav-link text-white" href="../Coleccion/">COLECCION</a>
+                  </li>
+            </ul>
+            <ul class="nav nav-pills">
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" id="persona" aria-expanded="false">Persona.Nombre Persona.Apellido    </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Salir</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+ <div class="Header">
+     <h1> COLECCION: </h1>
+ </div>
+ <div class="conteiner-fluid">
+   <div class="row">
+     <div class="row justify-content-center">
+         {% for jugador in jugadores %}
+         <div class="col-sm-2">
+             <div class="card" style="width: 18em;">
+                 <img src="../../static/Jugadores/Predeterminado.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ jugador.apellido}} </h5>
+                            <p class="card-text"> -- pts.</p>
+                        <div class="d-flex justify-content-center">
+                                <a href="../../Lobby/" class="btn btn-primary" >Cambiar</a>
+                        </div>
+                    </div>
+             </div>
+         </div>
+         {% endfor %}
+     </div>
+   </div>
+ </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

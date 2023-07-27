@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIGA</title>
+    <style>
+        .fondo{
+         background-image: url(../../static/fondo.jpg);
+         }
+         .equipos{
+         text-align: center;
+         color: white;
+         font-size: 20px;
+         font-family: "Georgia", Times, serif;
+         }
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body class="fondo">
+<div class="container-fluid">
+        <div class="row ">
+        <nav id="navbar-example2 " class="navbar" style="background-color: #11172d;">
+          <img src="../../static/Logo.png" width="170" >
+            <ul class="nav justify-content-center" >
+                  <li class="nav-item1">
+                    <a class="nav-link text-white" href="../../Lobby/">EQUIPO</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link active text-white" aria-current="page" href="../../Lobby/Liga">TABLA</a>
+                  </li>
+                  <li class="nav-item1">
+                    <a class="nav-link text-white" href="../../Lobby/Coleccion">COLECCION</a>
+                  </li>
+            </ul>
+            <ul class="nav nav-pills">
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" id="persona" aria-expanded="false">Persona.Nombre  Persona.Apellido</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Salir</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+<p class="equipos">LIGA GENEREAL</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">.
+        {% for persona in personas %}
+        <p class="equipos"> {{ persona.NombreEquipo }} </p>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">.
+        {% for equipo in equipos %}
+        <p class="equipos"> {{ equipo.puntos }} pts.</p>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

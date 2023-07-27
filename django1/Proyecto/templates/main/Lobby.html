@@ -1,0 +1,141 @@
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <title>Lobby</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <style>
+          .fondo{
+              background-image: url(../../static/fondo.jpg);
+              }
+          .Header{
+              color: white;
+              font-family: "Georgia", Times, serif;
+              text-align: center;
+              padding-top: 2%;
+          }
+          .nav-item{
+              color: white;
+          }
+          .card-img-top{
+              background: grey;
+              transform: scale(0.8);
+          }
+          .card-title{
+              color: white;
+              text-align: center;
+              font-size: 45px;
+              font-family: "Georgia", Times, serif;
+          }
+          .card{
+              background: grey;
+              transform: scale(0.65);
+          }
+          .card-text{
+              color: white;
+              text-align: center;
+              font-size: 30px;
+              font-family: "Georgia", Times, serif;
+          }
+     </style>
+</head>
+<body class="fondo">
+    <div class="container-fluid">
+        <div class="row">
+        <nav id="navbar-example2 " class="navbar" style="background-color: #11172d;">
+          <img src="../../static/Logo.png" width="170">
+            <ul class="nav justify-content-center">
+                  <li class="nav-item1">
+                    <a class="nav-link text-white" href="../../Lobby/">EQUIPO</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link active text-white" aria-current="page" href="Liga/">TABLA</a>
+                  </li>
+                  <li class="nav-item1">
+                    <a class="nav-link text-white" href="Coleccion/">COLECCION</a>
+                  </li>
+            </ul>
+            <ul class="nav nav-pills">
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" id="persona" aria-expanded="false">Persona.Nombre  Persona.Apellido</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Perfil</a></li>
+                    <li><a class="dropdown-item" href="../InicioSesion">Salir</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="Header"> EQUIPO </h1>
+                   <div class="row justify-content-center">
+
+                   <div class="col-sm-2">
+                      <div class="card" style="width: 25em;">
+                          <img src="./../static/Jugadores/Armani.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                 <h5 class="card-title">F. ARMANI</h5>
+                                    <p class="card-text">20 pts.</p>
+                                  <div class="d-flex justify-content-center">
+                                <a href="Coleccion/" class="btn btn-primary" >Cambiar</a>
+                                   </div>
+                              </div>
+                      </div>
+                    </div>
+                     <div class="col-sm-2">
+                          <div class="card" style="width: 25rem;">
+                              <img src="./../static/Jugadores/Izquierdoz2.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                     <h5 class="card-title">C. IZQUIERDOZ</h5>
+                                        <p class="card-text">15 pts</p>
+                                    <div class="d-flex justify-content-center">
+                                    <a href="Coleccion/" class="btn btn-primary">Cambiar</a>
+                                        </div>
+                                  </div>
+                          </div>
+                      </div>
+                     <div class="col-sm-2">
+                          <div class="card" style="width: 25rem;">
+                              <img src="./../static/Jugadores/Perez.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                     <h5 class="card-title">E. PEREZ</h5>
+                                        <p class="card-text">16 pts.</p>
+                                    <div class="d-flex justify-content-center">
+                                    <a href="Coleccion/" class="btn btn-primary">Cambiar</a>
+                                        </div>
+                                  </div>
+                          </div>
+                      </div>
+                     <div class="col-sm-2">
+                          <div class="card" style="width: 25rem;">
+                              <img src="./../static/Jugadores/Girotti.jpg" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                     <h5 class="card-title">L. GIROTTI</h5>
+                                        <p class="card-text">10 pts.</p>
+                                    <div class="d-flex justify-content-center">
+                                    <a href="Coleccion/" class="btn btn-primary">Cambiar</a>
+                                        </div>
+                                  </div>
+                          </div>
+                      </div>
+                     <div class="col-sm-2">
+                          <div class="card" style="width: 25rem;">
+                              <img src="./../static/Jugadores/Alvarez.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                     <h5 class="card-title">J. ALVAREZ</h5>
+                                        <p class="card-text">25 pts</p>
+                                    <div class="d-flex justify-content-center">
+                                    <a href="Coleccion/" class="btn btn-primary">Cambiar</a>
+                                        </div>
+                                  </div>
+                          </div>
+                      </div>
+
+            </div>
+        </div>
+      <p class="card-text"> Puntos en Total: 86 pts.</p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script></body>
+{% endblock content %}
